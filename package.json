@@ -1,0 +1,19 @@
+{
+  "name": "experimental",
+  "version": "1.0.0",
+  "description": "Experimental code for my personal site, leading to complete revamp.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeDahle/Personal-Site-Experimental.git"
+  },
+  "author": "Joe Dahle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoeDahle/Personal-Site-Experimental/issues"
+  },
+  "homepage": "https://github.com/JoeDahle/Personal-Site-Experimental#readme"
+}
