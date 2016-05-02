@@ -4,11 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Document</title>
+
+  <title>Experimental | Joe Dahle</title>
 
   <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
-<div class="hello">hello world</div>
+  <div class="menu">
+    <!-- TODO: menu should toggle between 'X' and menu icon in rotating fashion -->
+    <span class="js-menu menu__toggle material-icons">menu</span>
+  </div>
+
+  <nav class="js-navigator navigator">
+    <ul class="navigator__container">
+      <li class="navigator__item">
+        <a href="https://joedahle.me/" class="navigator__link">Home</a>
+      </li>
+      <li class="navigator__item">
+        <a href="https://joedahle.me/blog/" class="navigator__link">Blog</a>
+      </li>
+      <li class="navigator__item">
+        <a href="https://joedahle.me/views/resume.html" class="navigator__link">Portfolio</a>
+      </li>
+      <li class="navigator__item">
+        <a href="#" class="navigator__link">Labs</a>
+      </li>
+    </ul>
+  </nav>
 </body>
+  <script src="js/nav.js"></script>
 </html>
