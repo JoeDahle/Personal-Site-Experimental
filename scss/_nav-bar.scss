@@ -1,0 +1,56 @@
+//nav-bar partial
+
+// TODO create styles for desktop version, and mobile version
+// mobile, slide out menu
+// desktop, hover over menu that spans across the top
+
+// Color Palatte
+$header__background: #e1e1e1;
+$navigator__link: #1e1e1e;
+$navigator__item--active_background: #a1a1a1;
+$navigator__link--active: #1a1a1a;
+
+
+.menu__toggle {
+  padding: .55em;
+  position: absolute;
+  top: .25em;
+  left: .5em;
+  z-index: 100;
+  cursor: pointer;
+}
+.navigator {
+  position: fixed;
+  width: 100%;
+  height: 56px;
+  top: 0;
+  left: -102%;
+  background-color: $header__background;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.navigator--expand {
+  left: 0;
+}
+
+.navigator__container {
+  padding-left: 4em;
+}
+
+.navigator__item {
+  display: inline-block;
+  padding: .5em .5em 0 .5em;
+}
+
+.navigator__link :first-of-type {
+  padding-right: 5em;
+}
+
+.navigator__item:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.navigator__link {
+  color: $navigator__link;
+  text-decoration: none;
+}
