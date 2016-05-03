@@ -1,1 +1,14 @@
+// Import Partials
 @import 'nav-bar';
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+$font-stack: 'PT Sans Narrow', sans-serif;
+
+// Color Palette
+
+html, body {
+  font: $font-stack;
+  padding: 0;
+  margin: 0;
+}

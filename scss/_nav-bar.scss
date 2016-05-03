@@ -18,19 +18,45 @@ $navigator__link--active: #1a1a1a;
   left: .5em;
   z-index: 100;
   cursor: pointer;
+  animation-name: revertRoll;
 }
+
+.menu__toggle--animate {
+  animation-name: roll;
+  animation-duration: 0.4s;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
 .navigator {
   position: fixed;
   width: 100%;
   height: 56px;
   top: 0;
-  left: -102%;
+  // left: -102%;
   background-color: $header__background;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
 }
 
 .navigator--expand {
   left: 0;
+  -webkit-transition: all 0.33s cubic-bezier(0, 0, 0.26, 1.0);
+     -moz-transition: all 0.33s cubic-bezier(0, 0, 0.26, 1.0);
+      -ms-transition: all 0.33s cubic-bezier(0, 0, 0.26, 1.0);
+}
+
+.navigator--collapse {
+  left: -102%;
+  -webkit-transition: all 0.33s cubic-bezier(0.83, 0.25, 0.29, 1.36);
+     -moz-transition: all 0.33s cubic-bezier(0.83, 0.25, 0.29, 1.36);
+      -ms-transition: all 0.33s cubic-bezier(0.83, 0.25, 0.29, 1.36);
 }
 
 .navigator__container {

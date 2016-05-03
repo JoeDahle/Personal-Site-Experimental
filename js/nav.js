@@ -2,27 +2,36 @@
 
 class navBar {
   constructor () {
-    this.showMenuButtonEl = document.querySelector('menu-icon');
-    this.hideMenuButtonEl = document.querySelector('exit-icon');
-    this.navBarEl = document.querySelector('header-navbar-list');
+    this.toggleMenuButtonEl = document.querySelector('.js-menu');
+    this.navbarEl = document.querySelector('.js-navigator');
 
-    this.showNavbar = this.showNavbar.bind(this);
-    this.hideNavbar = this.hideNavbar.bind(this);
+    this.toggleAnimation = this.toggleAnimation.bind(this);
+    this.toggleNavbar = this.toggleNavbar.bind(this);
 
     this.addEventListeners();
   }
 
   addEventListeners () {
-    this.showMenuButtonEl.addEventListener('mouseover', this.showNavbar);
-    this.hideMenuButtonEl.addEventListener('mouseout', this.hideNavbar);
+    this.toggleMenuButtonEl.addEventListener('click', this.toggleAnimation);
+    this.toggleMenuButtonEl.addEventListener('click', this.toggleNavbar);
   }
 
-  showNavbar () {
-    
+/**
+ * Toggle the visibility of the navigation bar
+ */
+  toggleNavbar () {
+    this.navbarEl.classList.toggle('navigator--collapse');
+    this.navbarEl.classList.toggle('navigator--expand');
   }
 
-  hideNavbar () {
-
+// TODO: add delay to content transition
+  toggleAnimation () {
+    this.toggleMenuButtonEl.classList.toggle('menu__toggle--animate');
+    if (this.toggleMenuButtonEl.classList.contains('menu__toggle--animate')) {
+        this.toggleMenuButtonEl.innerHTML = 'close';
+    } else {
+      this.toggleMenuButtonEl.innerHTML = 'menu';
+    }
   }
 }
 
