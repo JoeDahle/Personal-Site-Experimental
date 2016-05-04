@@ -1,9 +1,5 @@
 //nav-bar partial
 
-// TODO create styles for desktop version, and mobile version
-// mobile, slide out menu
-// desktop, hover over menu that spans across the top
-
 // Color Palatte
 $header__background: #e1e1e1;
 $navigator__link: #1e1e1e;
@@ -43,6 +39,12 @@ $navigator__link--active: #1a1a1a;
   // left: -102%;
   background-color: $header__background;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.navigator--animatable {
+  -webkit-transition: all 0.33s cubic-bezier(0, 0, 0.26, 1.0);
+     -moz-transition: all 0.33s cubic-bezier(0, 0, 0.26, 1.0);
+      -ms-transition: all 0.33s cubic-bezier(0, 0, 0.26, 1.0);
 }
 
 .navigator--expand {
