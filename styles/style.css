@@ -6,7 +6,7 @@
   left: .5em;
   z-index: 100;
   cursor: pointer;
-  animation-name: revertRoll; }
+  color: white; }
 
 .menu__toggle--animate {
   animation-name: roll;
@@ -23,7 +23,7 @@
   width: 100%;
   height: 56px;
   top: 0;
-  background-color: #e1e1e1;
+  background-color: rgba(30, 30, 30, 0.4);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7); }
 
 .navigator--animatable {
@@ -48,7 +48,7 @@
 
 .navigator__item {
   display: inline-block;
-  padding: .5em .5em 0 .5em; }
+  padding: .5em .5em .5em .5em; }
 
 .navigator__link :first-of-type {
   padding-right: 5em; }
@@ -57,11 +57,33 @@
   border-bottom: 2px solid #fff; }
 
 .navigator__link {
-  color: #1e1e1e;
+  color: #e1e1e1;
   text-decoration: none; }
+
+.intrigue__container {
+  width: 100%;
+  height: 100%; }
+
+.intrigue__background {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%; }
+
+.intrigue__title {
+  color: #e1e1e1;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-size: 9em;
+  top: 0.5em; }
 
 html, body {
   font-family: "PT Sans Narrow", sans-serif;
   padding: 0;
-  margin: 0;
-  background-color: #1e1e1e; }
+  margin: 0; }
