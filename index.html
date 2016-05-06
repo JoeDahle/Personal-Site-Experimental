@@ -41,7 +41,41 @@
     srcset="./assets/background-1000.jpg 1x, ./assets/background-2000.jpg 2x"
     alt="Image of a developers desk">
     <h1 class="intrigue__title">Web Developer</h1>
-    <h1 class="intrigue__form intrigue__form--flipped">Form</h1>
+    <form class="intrigue__form intrigue__form--flipped" action="cgi-bin/mailer.py">
+      <ul class="form__container">
+        <li class="form__element">
+          <h1 class="form__title">Contact Me</h1>
+        </li>
+        <li class="form__element">
+          <label for="form__name">Name</label>
+          <input type="text"
+            id="form__name"
+            name="SenderName"
+            autocomplete="name"
+            placeholder="Cosmo Kramer"
+            required>
+        </li>
+        <li class="form__element">
+          <label class="form__email" for="form__email">Email</label>
+          <input type="text"
+          id="form__email"
+          name="SenderEmail"
+          autocomplete="email"
+          placeholder="kman@kramerica.com"
+          required>
+        </li>
+        <li class="form__element">
+          <label class="form__body" for="form__body">Message</label>
+          <br><br>
+          <textarea name="Body" id="form__body" placeholder="What's up?"></textarea>
+        </li>
+        <li class="form__element">
+          <button class="form__submit"
+            type="submit"
+            value="Submit">Submit</button>
+        </li>
+      </ul>
+    </form>
   </section>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
