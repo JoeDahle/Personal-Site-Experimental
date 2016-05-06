@@ -81,7 +81,79 @@
   width: 100%;
   text-align: center;
   font-size: 9em;
-  top: 0.5em; }
+  top: 0.5em;
+  animation-name: frontFlipReturn;
+  animation-duration: 0.5s; }
+
+.intrigue__title--flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  animation-name: frontFlip;
+  animation-duration: 0.5s;
+  -webkit-backface-visibility: hidden; }
+
+.intrigue__form {
+  color: #e1e1e1;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-size: 9em;
+  top: 0.5em;
+  animation-name: backFlipReturn;
+  animation-duration: 0.5s; }
+
+.intrigue__form--flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  animation-name: backFlip;
+  animation-duration: 0.5s;
+  -webkit-backface-visibility: hidden; }
+
+@keyframes frontFlip {
+  0% {
+    -webkit-transform: scaleX(1);
+    visibility: visible; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -webkit-transform: scaleX(-1);
+    visibility: hidden; } }
+
+@keyframes frontFlipReturn {
+  0% {
+    -webkit-transform: scaleX(-1);
+    visibility: hidden; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -webkit-transform: scaleX(1);
+    visibility: visible; } }
+
+@keyframes backFlip {
+  0% {
+    -webkit-transform: scaleX(1);
+    visibility: visible; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -webkit-transform: scaleX(-1);
+    visibility: hidden; } }
+
+@keyframes backFlipReturn {
+  0% {
+    -webkit-transform: scaleX(-1);
+    visibility: hidden; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -webkit-transform: scaleX(1);
+    visibility: visible; } }
 
 html, body {
   font-family: "PT Sans Narrow", sans-serif;

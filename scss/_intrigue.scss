@@ -1,0 +1,124 @@
+// intrigue partial
+
+// color palatte
+
+.intrigue__container {
+  width: 100%;
+  height: 100%;
+}
+
+.intrigue__background {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.intrigue__title {
+  color: #e1e1e1;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-size: 9em;
+  top: 0.5em;
+  animation-name: frontFlipReturn;
+  animation-duration: 0.5s;
+}
+
+
+.intrigue__title--flipped {
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+       -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  animation-name: frontFlip;
+  animation-duration: 0.5s;
+  -webkit-backface-visibility: hidden;
+  // visibility: hidden;
+}
+
+.intrigue__form {
+  color: #e1e1e1;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-size: 9em;
+  top: 0.5em;
+  animation-name: backFlipReturn;
+  animation-duration: 0.5s;
+}
+
+.intrigue__form--flipped {
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+       -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  animation-name: backFlip;
+  animation-duration: 0.5s;
+  -webkit-backface-visibility: hidden;
+  // visibility: hidden;
+}
+
+@keyframes frontFlip {
+  0% {
+    -webkit-transform: scaleX(1);
+    visibility: visible;
+    // TODO: add the rest of the webkits
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: scaleX(-1);
+    visibility: hidden;
+  }
+}
+
+@keyframes frontFlipReturn {
+  0% {
+    -webkit-transform: scaleX(-1);
+    visibility: hidden;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    visibility: visible;
+  }
+}
+
+@keyframes backFlip {
+  0% {
+    -webkit-transform: scaleX(1);
+    visibility: visible;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: scaleX(-1);
+    visibility: hidden;
+  }
+}
+
+@keyframes backFlipReturn {
+  0% {
+    -webkit-transform: scaleX(-1);
+    visibility: hidden;
+  }
+  30% {
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    visibility: visible;
+  }
+}
