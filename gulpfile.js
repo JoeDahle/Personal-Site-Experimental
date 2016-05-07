@@ -5,7 +5,7 @@ var sass = require('gulp-sass');
 var responsive = require('gulp-responsive-images');
 
 gulp.task('deploy', function(){
-  return gulp.src('./')
+  return gulp.src('./**/*')
     .pipe(pages());
 });
 
