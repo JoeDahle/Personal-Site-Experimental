@@ -48,7 +48,7 @@
         </li>
         <li class="form__element">
           <label for="form__name">Name</label>
-          <input type="text"
+          <input type="name"
             id="form__name"
             name="SenderName"
             autocomplete="name"
@@ -57,12 +57,14 @@
         </li>
         <li class="form__element">
           <label class="form__email" for="form__email">Email</label>
-          <input type="text"
+          <input type="email"
           id="form__email"
           name="SenderEmail"
           autocomplete="email"
           placeholder="kman@kramerica.com"
+          onblur="validate()"
           required>
+          <span class="form__email-element form__email-element--invalid">Please use a valid email.</span>
         </li>
         <li class="form__element">
           <label class="form__body" for="form__body">Message</label>
@@ -78,7 +80,7 @@
     </form>
   </section>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="js/validate.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/flip.js"></script>
 </html>

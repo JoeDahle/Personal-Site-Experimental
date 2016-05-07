@@ -93,7 +93,9 @@
   transform: rotateY(180deg);
   animation-name: frontFlip;
   animation-duration: 0.5s;
-  -webkit-backface-visibility: hidden; }
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden; }
 
 .intrigue__form {
   color: #e1e1e1;
@@ -104,6 +106,202 @@
   margin-left: -12em;
   animation-name: backFlipReturn;
   animation-duration: 0.5s; }
+
+.intrigue__form--flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  animation-name: backFlip;
+  animation-duration: 0.5s;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden; }
+
+@-webkit-keyframes frontFlip {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    visibility: visible; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    visibility: hidden; } }
+
+@-moz-keyframes frontFlip {
+  0% {
+    -moz-transform: scaleX(1);
+    transform: scaleX(1);
+    visibility: visible; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -moz-transform: scaleX(-1);
+    transform: scaleX(-1);
+    visibility: hidden; } }
+
+@-o-keyframes frontFlip {
+  0% {
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+    visibility: visible; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    visibility: hidden; } }
+
+@keyframes frontFlip {
+  0% {
+    transform: scaleX(1);
+    visibility: visible; }
+  30% {
+    visibility: hidden; }
+  100% {
+    transform: scaleX(-1);
+    visibility: hidden; } }
+
+@-webkit-keyframes frontFlipReturn {
+  0% {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    visibility: hidden; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    visibility: visible; } }
+
+@-moz-keyframes frontFlipReturn {
+  0% {
+    -moz-transform: scaleX(-1);
+    transform: scaleX(-1);
+    visibility: hidden; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -moz-transform: scaleX(1);
+    transform: scaleX(1);
+    visibility: visible; } }
+
+@-o-keyframes frontFlipReturn {
+  0% {
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    visibility: hidden; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+    visibility: visible; } }
+
+@keyframes frontFlipReturn {
+  0% {
+    transform: scaleX(-1);
+    visibility: hidden; }
+  30% {
+    visibility: hidden; }
+  100% {
+    transform: scaleX(1);
+    visibility: visible; } }
+
+@-webkit-keyframes backFlip {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    visibility: visible; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    visibility: hidden; } }
+
+@-moz-keyframes backFlip {
+  0% {
+    -moz-transform: scaleX(1);
+    transform: scaleX(1);
+    visibility: visible; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -moz-transform: scaleX(-1);
+    transform: scaleX(-1);
+    visibility: hidden; } }
+
+@-o-keyframes backFlip {
+  0% {
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+    visibility: visible; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    visibility: hidden; } }
+
+@keyframes backFlip {
+  0% {
+    transform: scaleX(1);
+    visibility: visible; }
+  30% {
+    visibility: hidden; }
+  100% {
+    transform: scaleX(-1);
+    visibility: hidden; } }
+
+@-webkit-keyframes backFlipReturn {
+  0% {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    visibility: hidden; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    visibility: visible; } }
+
+@-moz-keyframes backFlipReturn {
+  0% {
+    -moz-transform: scaleX(-1);
+    transform: scaleX(-1);
+    visibility: hidden; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -moz-transform: scaleX(1);
+    transform: scaleX(1);
+    visibility: visible; } }
+
+@-o-keyframes backFlipReturn {
+  0% {
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    visibility: hidden; }
+  30% {
+    visibility: hidden; }
+  100% {
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+    visibility: visible; } }
+
+@keyframes backFlipReturn {
+  0% {
+    transform: scaleX(-1);
+    visibility: hidden; }
+  30% {
+    visibility: hidden; }
+  100% {
+    transform: scaleX(1);
+    visibility: visible; } }
 
 .form__container {
   width: 24em;
@@ -148,14 +346,28 @@
   background: #FFF;
   border: 1px solid #39504E; }
 
+.form__email-element {
+  display: none; }
+
+.form__email-element--invalid {
+  color: #fff;
+  background-color: #D6273B;
+  display: inline;
+  padding: 2px;
+  border-radius: 2px;
+  margin-left: 0.25em; }
+
+#form__email:valid {
+  border-left: 3px solid green; }
+
 .form__element > textarea {
   height: 10em;
   width: 26em; }
 
-.form__element > button {
+.form__submit {
   float: right;
   width: auto;
-  background: #fff;
+  background-color: #e1e1e1;
   border: 0;
   padding: 9px 15px;
   cursor: pointer;
@@ -165,56 +377,6 @@
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px; }
-
-.intrigue__form--flipped {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  animation-name: backFlip;
-  animation-duration: 0.5s;
-  -webkit-backface-visibility: hidden; }
-
-@keyframes frontFlip {
-  0% {
-    -webkit-transform: scaleX(1);
-    visibility: visible; }
-  30% {
-    visibility: hidden; }
-  100% {
-    -webkit-transform: scaleX(-1);
-    visibility: hidden; } }
-
-@keyframes frontFlipReturn {
-  0% {
-    -webkit-transform: scaleX(-1);
-    visibility: hidden; }
-  30% {
-    visibility: hidden; }
-  100% {
-    -webkit-transform: scaleX(1);
-    visibility: visible; } }
-
-@keyframes backFlip {
-  0% {
-    -webkit-transform: scaleX(1);
-    visibility: visible; }
-  30% {
-    visibility: hidden; }
-  100% {
-    -webkit-transform: scaleX(-1);
-    visibility: hidden; } }
-
-@keyframes backFlipReturn {
-  0% {
-    -webkit-transform: scaleX(-1);
-    visibility: hidden; }
-  30% {
-    visibility: hidden; }
-  100% {
-    -webkit-transform: scaleX(1);
-    visibility: visible; } }
 
 html, body {
   font-family: "PT Sans Narrow", sans-serif;

@@ -13,7 +13,7 @@ class flip {
   addEventListeners () {
     // TODO: change event listener to the email button once it is created
     this.titleEl.addEventListener('click', this.flipElement);
-    this.formEl.addEventListener('click', this.flipElement);
+    // this.formEl.addEventListener('click', this.flipElement);
   }
 
   flipElement () {
