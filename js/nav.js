@@ -5,7 +5,7 @@ class navBar {
     // element selectors
     this.toggleMenuButtonEl = document.querySelector('.js-menu');
     this.navbarEl = document.querySelector('.js-navigator');
-    this.backgroundEl = document.querySelector('.intrigue__container');
+    this.backgroundEl = document.querySelector('.js-intrigue');
 
     // bindings
     this.toggleAnimation = this.toggleAnimation.bind(this);
@@ -19,9 +19,6 @@ class navBar {
     this.toggleMenuButtonEl.addEventListener('click', this.toggleAnimation);
     this.toggleMenuButtonEl.addEventListener('click', this.toggleNavbar);
     this.backgroundEl.addEventListener('click', this.hideNavbar);
-
-    // TODO: add event listener to close header when clicking outside
-    // the navigation. Will be done, once more elements are added.
   }
 
   /**
@@ -35,6 +32,7 @@ class navBar {
   hideNavbar () {
     this.navbarEl.classList.remove('navigator--expand');
     this.navbarEl.classList.add('navigator--collapse');
+    this.toggleAnimation();
   }
 
   toggleAnimation () {
