@@ -32,7 +32,12 @@ class navBar {
   hideNavbar () {
     this.navbarEl.classList.remove('navigator--expand');
     this.navbarEl.classList.add('navigator--collapse');
-    this.toggleAnimation();
+    if (this.toggleMenuButtonEl.innerHTML == 'close') {
+      this.toggleAnimation();
+    }
+    else {
+      return;
+    }
   }
 
   toggleAnimation () {
