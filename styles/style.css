@@ -360,7 +360,7 @@
     visibility: visible; } }
 
 .form__container {
-  width: 24em;
+  width: 25em;
   height: 30em;
   list-style-type: none;
   list-style-position: outside;
@@ -369,10 +369,16 @@
   background-color: rgba(30, 30, 30, 0.4);
   border-radius: 2px; }
 
+.form__title {
+  text-align: center;
+  font-size: 3.5em;
+  padding: 0;
+  margin: 0; }
+
 .form__element {
   padding: 1em;
   position: relative;
-  width: 22em; }
+  width: 23em; }
 
 .form__name {
   margin: 0;
@@ -418,7 +424,7 @@
 
 .form__element > textarea {
   height: 10em;
-  width: 26em; }
+  width: inherit; }
 
 .form__submit {
   float: right;
