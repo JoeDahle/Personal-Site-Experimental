@@ -21,6 +21,7 @@
     "gulp-gh-pages": "^0.5.4",
     "gulp-responsive-images": "0.0.3",
     "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
     "install": "^0.6.1"
   }
 }
