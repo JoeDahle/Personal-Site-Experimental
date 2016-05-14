@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var pages = require('gulp-gh-pages');
 var browserSync = require('browser-sync');
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var responsive = require('gulp-responsive-images');
 
 gulp.task('deploy', function(){
@@ -18,7 +19,9 @@ gulp.task('serve', function(){
 
 gulp.task('sass', function(){
   return gulp.src('scss/style.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass.sync().on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('styles'));
 });
 
