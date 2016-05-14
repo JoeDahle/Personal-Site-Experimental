@@ -2,8 +2,9 @@
 
 class flip {
   constructor () {
-    this.titleEl = document.querySelector('.intrigue__title');
-    this.formEl = document.querySelector('.intrigue__form');
+    this.titleEl = document.querySelector('.js-title');
+    this.formEl = document.querySelector('.js-form');
+    this.emailIconEl = document.querySelector('.js-form-toggle');
 
     this.flipElement = this.flipElement.bind(this);
 
@@ -11,9 +12,7 @@ class flip {
   }
 
   addEventListeners () {
-    // TODO: change event listener to the email button once it is created
-    this.titleEl.addEventListener('click', this.flipElement);
-    // this.formEl.addEventListener('click', this.flipElement);
+    this.emailIconEl.addEventListener('click', this.flipElement);
   }
 
   flipElement () {
