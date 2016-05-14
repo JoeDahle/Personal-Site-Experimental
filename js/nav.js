@@ -27,6 +27,8 @@ class navBar {
   toggleNavbar () {
     this.navbarEl.classList.toggle('navigator--collapse');
     this.navbarEl.classList.toggle('navigator--expand');
+    this.toggleMenuButtonEl.classList.toggle('md-light');
+    this.toggleMenuButtonEl.classList.toggle('md-dark');
   }
 
   hideNavbar () {

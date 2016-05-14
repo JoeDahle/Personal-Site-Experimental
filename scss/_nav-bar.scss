@@ -1,11 +1,13 @@
 //nav-bar partial
 
 // Color Palatte
-$header__background: rgba(30, 30, 30, 0.4);
-$navigator__link: #e1e1e1;
+$header__background: #e1e1e1;
+// $header__background: rgba(30, 30, 30, 0.4);
+$navigator__link: #1f1f1f;
 $navigator__item--active_background: #a1a1a1;
-$navigator__link--active: #1a1a1a;
+$navigator__link--active: #1f1f1f;
 $menu__toggle--light: rgba(255, 255, 255, 1);
+$menu__toggle--dark: rgba(0, 0, 0, 0.54);
 
 
 .menu__toggle {
@@ -15,9 +17,16 @@ $menu__toggle--light: rgba(255, 255, 255, 1);
   left: .5em;
   z-index: 100;
   cursor: pointer;
-  color: $menu__toggle--light;
   animation: return;
   animation-duration: 0.4s;
+}
+
+.md-light {
+  color: $menu__toggle--light;
+}
+
+.md-dark {
+  color: $menu__toggle--dark;
 }
 
 @-webkit-keyframes return {
@@ -152,7 +161,7 @@ $menu__toggle--light: rgba(255, 255, 255, 1);
 }
 
 .navigator__item:hover {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.54);
 }
 
 .navigator__link {
