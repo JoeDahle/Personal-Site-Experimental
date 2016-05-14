@@ -12,6 +12,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+  <script src="https://use.fontawesome.com/f40fde9434.js"></script>
 </head>
 <body>
   <div class="menu">
@@ -35,13 +36,13 @@
     </ul>
   </nav>
 
-  <section class="intrigue__container">
+  <section class="js-intrigue intrigue__container">
     <img class="intrigue__background"
     src="./assets/background-500.jpg"
     srcset="./assets/background-1000.jpg 1x, ./assets/background-2000.jpg 2x"
     alt="Image of a developers desk">
-    <h1 class="intrigue__title">Web Developer</h1>
-    <form class="intrigue__form intrigue__form--flipped" action="cgi-bin/mailer.py">
+    <h1 class="js-title intrigue__title">Web Developer</h1>
+    <form class="js-form intrigue__form intrigue__form--flipped" action="cgi-bin/mailer.py">
       <ul class="form__container">
         <li class="form__element">
           <h1 class="form__title">Contact Me</h1>
@@ -79,6 +80,19 @@
       </ul>
     </form>
   </section>
+  <footer class="contact__container">
+    <ul class="contact__list">
+      <li class="contact__element">
+        <a href="#" class=" js-form-toggle contact__icon fa fa-envelope fa-lg"></a>
+      </li>
+      <li class="contact__element">
+        <a href="https://linkedin.com/in/JoeDahle" class="contact__icon fa fa-linkedin-square fa-lg"></a>
+      </li>
+      <li class="contact__element">
+        <a href="https://github.com/JoeDahle" class="contact__icon fa fa-github-square fa-lg"></a>
+      </li>
+    </ul>
+  </footer>
 </body>
   <script src="js/validate.js"></script>
   <script src="js/nav.js"></script>

@@ -2,6 +2,8 @@
 
 // color palatte
 $form__background-color: rgba(30, 30, 30, 0.4);
+$intrigue__form-text-color: #e1e1e1;
+$invalid-email__background: #D6273B;
 
 .intrigue__container {
   width: 100%;
@@ -46,7 +48,7 @@ $form__background-color: rgba(30, 30, 30, 0.4);
 }
 
 .intrigue__form {
-  color: #e1e1e1;
+  color: $intrigue__form-text-color;
   position: absolute;
   width: 24em;
   top: 6em;
@@ -322,7 +324,7 @@ $form__background-color: rgba(30, 30, 30, 0.4);
 }
 
 .form__container {
-  width: 24em;
+  width: 25em;
   height: 30em;
   list-style-type: none;
   list-style-position: outside;
@@ -332,10 +334,17 @@ $form__background-color: rgba(30, 30, 30, 0.4);
   border-radius: 2px;
 }
 
+.form__title {
+  text-align: center;
+  font-size: 3.5em;
+  padding: 0;
+  margin: 0;
+}
+
 .form__element {
   padding: 1em;
   position: relative;
-  width: 22em;
+  width: 23em;
 }
 
 .form__name {
@@ -378,8 +387,8 @@ $form__background-color: rgba(30, 30, 30, 0.4);
 }
 
 .form__email-element--invalid {
-  color: #fff;
-  background-color: #D6273B;
+  color: #FFF;
+  background-color: $invalid-email__background;
   display: inline;
   padding: 2px;
   border-radius: 2px;
@@ -392,13 +401,13 @@ $form__background-color: rgba(30, 30, 30, 0.4);
 
 .form__element > textarea {
   height: 10em;
-  width: 26em;
+  width: inherit;
 }
 
 .form__submit {
   float: right;
   width: auto;
-  background-color: #e1e1e1;
+  background-color: $intrigue__form-text-color;
   border: 0;
   padding: 9px 15px;
   cursor: pointer;

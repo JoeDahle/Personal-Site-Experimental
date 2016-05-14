@@ -6,11 +6,67 @@
   left: .5em;
   z-index: 100;
   cursor: pointer;
-  color: white; }
+  color: white;
+  animation: return;
+  animation-duration: 0.4s; }
+
+@-webkit-keyframes return {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg); } }
+
+@-moz-keyframes return {
+  0% {
+    -moz-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -moz-transform: rotate(-180deg);
+    transform: rotate(-180deg); } }
+
+@-o-keyframes return {
+  0% {
+    -o-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg); } }
+
+@keyframes return {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(-180deg); } }
 
 .menu__toggle--animate {
   animation-name: roll;
   animation-duration: 0.4s; }
+
+@-webkit-keyframes roll {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); } }
+
+@-moz-keyframes roll {
+  0% {
+    -moz-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg); } }
+
+@-o-keyframes roll {
+  0% {
+    -o-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); } }
 
 @keyframes roll {
   0% {
@@ -304,7 +360,7 @@
     visibility: visible; } }
 
 .form__container {
-  width: 24em;
+  width: 25em;
   height: 30em;
   list-style-type: none;
   list-style-position: outside;
@@ -313,10 +369,16 @@
   background-color: rgba(30, 30, 30, 0.4);
   border-radius: 2px; }
 
+.form__title {
+  text-align: center;
+  font-size: 3.5em;
+  padding: 0;
+  margin: 0; }
+
 .form__element {
   padding: 1em;
   position: relative;
-  width: 22em; }
+  width: 23em; }
 
 .form__name {
   margin: 0;
@@ -350,7 +412,7 @@
   display: none; }
 
 .form__email-element--invalid {
-  color: #fff;
+  color: #FFF;
   background-color: #D6273B;
   display: inline;
   padding: 2px;
@@ -362,7 +424,7 @@
 
 .form__element > textarea {
   height: 10em;
-  width: 26em; }
+  width: inherit; }
 
 .form__submit {
   float: right;
@@ -377,6 +439,25 @@
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px; }
+
+.contact__container {
+  position: fixed;
+  top: 85%;
+  right: 10%; }
+
+.contact__list li {
+  display: inline-block; }
+
+.contact__icon {
+  color: #e1e1e1;
+  padding: 10px; }
+
+.contact__icon:hover {
+  color: #FFF; }
+
+.contact__list a {
+  font-size: 2.25em;
+  text-decoration: none; }
 
 html, body {
   font-family: "PT Sans Narrow", sans-serif;
